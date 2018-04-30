@@ -9,9 +9,10 @@ class MyApplication: Application() {
     override fun onCreate() {
         super.onCreate()
 
-            val realmConfig = RealmConfiguration.Builder(this)
+            Realm.init(this)
+            val realmConfig = RealmConfiguration.Builder()
                     .name(Realm.DEFAULT_REALM_NAME)
-                    .schemaVersion(0)
+                    .schemaVersion(1)
                     .deleteRealmIfMigrationNeeded()
                     .build()
             Realm.setDefaultConfiguration(realmConfig)
