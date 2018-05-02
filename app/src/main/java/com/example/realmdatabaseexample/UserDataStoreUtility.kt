@@ -1,6 +1,5 @@
 package com.example.realmdatabaseexample
 
-import android.content.Context
 import io.realm.Realm
 
 class UserDataStoreUtility {
